@@ -503,7 +503,7 @@ local function pre_process(msg)
 			if lang then
 				tdcli.sendMessage(msg.to.id, msg.id_, 1, '_گروه به مدت 1 روز شارژ شد. لطفا با سودو برای شارژ بیشتر تماس بگیرید. در غیر اینصورت گروه شما از لیست `ربات حذف و ربات گروه را ترک خواهد کرد`._', 1, 'md')
 			else
-				tdcli.sendMessage(msg.to.id, msg.id_, 1, '_Group charged 1 day. to recharge the robot contact with the sudo. With the completion of charging time, the group removed from the robot list and the robot will leave the group._', 1, 'md')
+				tdcli.sendMessage(msg.to.id, msg.id_, 1, '_`Group charged 1 day`. to recharge the robot contact with the sudo. With the completion of charging time, the group removed from the robot list and the robot will leave the group._', 1, 'md')
 			end
 		end
 		if chex and not exd and msg.from.id ~= SUDO and not is_sudo(msg) then
@@ -602,9 +602,9 @@ if is_sudo(msg) then
 					redis:set('CheckExpire::'..msg.to.id,true)
 				end
 				if lang then
-					tdcli.sendMessage(msg.to.id, msg.id_, 1, '_گروه به مدت 3 دقیقه برای اجرای تنظیمات شارژ میباشد._', 1, 'md')
+					tdcli.sendMessage(msg.to.id, msg.id_, 1, '_گروه به مدت 3 دقیقه برای اجرای `تنظیمات شارژ` میباشد._', 1, 'md')
 				else
-					tdcli.sendMessage(msg.to.id, msg.id_, 1, '_Group charged 3 minutes  for settings._', 1, 'md')
+					tdcli.sendMessage(msg.to.id, msg.id_, 1, '_`Group charged 3 minutes  for settings.`_', 1, 'md')
 				end
 		end
 		if (matches[1]:lower() == 'rem' or matches[1] == 'حذف گروه') and not matches[2] and is_admin(msg) then
@@ -618,7 +618,7 @@ if is_sudo(msg) then
 		end
 		if matches[1] == 'leave' or matches[1] == 'خروج' and matches[2] and is_admin(msg) then
 			if lang then
-				tdcli.sendMessage(matches[2], 0, 1, '`ربات با دستور `سودو` از گروه `خارج شد.\nبرای اطلاعات بیشتر با سودو تماس بگیرید.', 1, 'md')
+				tdcli.sendMessage(matches[2], 0, 1, '`ربات با دستور `سودو` از گروه `خارج شد.\nبرای اطلاعات بیشتر با سودو @KING_DIS_LOVE  تماس بگیرید.', 1, 'md')
 				tdcli.changeChatMemberStatus(matches[2], our_id, 'Left', dl_cb, nil)
 				tdcli.sendMessage(SUDO, msg.id_, 1, 'ربات با موفقیت از گروه '..matches[2]..' خارج شد.', 1,'md')
 			else
@@ -1197,7 +1197,7 @@ if matches[1] == "helptools" or  matches[1] == "راهنما ابزار" and is_
 if not lang then
 text = [[
 
-_Sudoer And Admins Beyond Bot Help :_
+_Sudoer And Admins SPIDER BOT LOCKER Help :_
 
 *!visudo* `[username|id|reply]`
 _Add Sudo_
@@ -1299,6 +1299,7 @@ _Invite You To Specific Group_
 _Leave Bot From Specific Group_
 
 _You can use_ *[!/#]* _at the beginning of commands._
+_Channel:  @MrLock_cli
 
 `This help is only for sudoers/bot admins.`
  
@@ -1309,7 +1310,7 @@ tdcli.sendMessage(msg.chat_id_, 0, 1, text, 1, 'md')
 else
 
 text = [[
-_راهنمای ادمین و سودو های ربات بیوند:_
+_دستورات برای ادمین ها و سودوهای ربات Spider Bot_:
 
 *سودو* `[username|id|reply]`
 _اضافه کردن سودو_
@@ -1548,8 +1549,8 @@ patterns_fa = {
     "^(ارسال) +(.*) (-%d+)$",
 	"^(افزودن) (-%d+)$",
 	"^(پاک کردن حافظه)$",
-	"^(بیوند)$",
+	"^(Spider Bot)$",
 },
 run = run, pre_process = pre_process
 }
--- #End By @BeyondTeam
+-- #End By @MrLOCK_CLI
