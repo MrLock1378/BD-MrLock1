@@ -1,4 +1,4 @@
---Begin Utils.lua By #BeyondTeam :)
+--Begin Utils.lua By #Mr Lock :)
 function serialize_to_file(data, file, uglify)
   file = io.open(file, 'w+')
   local serialized
@@ -582,7 +582,7 @@ local lang = redis:get(hash)
   if not lang then
     return '_Group is not added_'
 else
-    return 'گروه به لیست گروه های مدیریتی ربات اضافه نشده است'
+    return 'گروه به لیست گروه های مدیریتی Mr LOCK اضافه نشده است'
    end
   end
   -- determine if table is empty
@@ -614,7 +614,7 @@ local lang = redis:get(hash)
   if not lang then
     return '_Group is not added_'
 else
-    return 'گروه به لیست گروه های مدیریتی ربات اضافه نشده است'
+    return '🚫گروه به لیست گروه های مدیریتی ربات Mr LOCK اضافه نشده است'
    end
   end
   -- determine if table is empty
@@ -622,7 +622,7 @@ else
         if not lang then
 					return "_No_ *silent* _users in this group_"
    else
-					return "*لیست کاربران سایلنت شده خالی است*"
+					return " :) *لیست کاربران سایلنت شده خالی است*"
              end
 				end
       if not lang then
@@ -646,7 +646,7 @@ local lang = redis:get(hash)
   if not lang then
     return '_Group is not added_'
 else
-    return 'گروه به لیست گروه های مدیریتی ربات اضافه نشده است'
+    return '🚫گروه به لیست گروه های مدیریتی ربات  Mr Lock اضافه نشده است'
    end
   end
   if not data[tostring(chat_id)]['whitelist'] then
@@ -658,7 +658,7 @@ else
      if not lang then
 					return "_No_ *users* _in white list_"
    else
-					return "*هیچ کاربری در لیست سفید وجود ندارد*"
+					return " :) *هیچ کاربری در لیست سفید وجود ندارد*"
               end
 				end
        if not lang then
@@ -686,13 +686,13 @@ local lang = redis:get(hash)
     if not lang then
 					return "_No_ *globally banned* _users available_"
    else
-					return "*هیچ کاربری از گروه های ربات محروم نشده*"
+					return ":) *هیچ کاربری از گروه های ربات محروم نشده*"
              end
 				end
         if not lang then
    message = '*List of globally banned users :*\n'
    else
-   message = '_لیست کاربران محروم شده از گروه های ربات :_\n'
+   message = '_ :)لیست کاربران محروم شده از گروه های ربات :_\n'
    end
   for k,v in pairs(data['gban_users']) do
     message = message ..i.. '- '..v..' [' ..k.. '] \n'
@@ -713,7 +713,7 @@ local lang = redis:get(hash)
   if not lang then
     return '_Group is not added_'
 else
-    return 'گروه به لیست گروه های مدیریتی ربات اضافه نشده است'
+    return '🚫گروه به لیست گروه های مدیریتی ربات  Mr Lockاضافه نشده است'
    end
   end
   -- determine if table is empty
@@ -721,7 +721,7 @@ else
       if not lang then
     return "*Filtered words list* _is empty_"
       else
-    return "_لیست کلمات فیلتر شده خالی است_"
+    return "_ :)لیست کلمات فیلتر شده خالی است_"
      end
   end
   if not data[tostring(msg.chat_id_)]['filterlist'] then
@@ -731,7 +731,7 @@ else
       if not lang then
        filterlist = '*List of filtered words :*\n'
          else
-       filterlist = '_لیست کلمات فیلتر شده :_\n'
+       filterlist = '_ :)لیست کلمات فیلتر شده :_\n'
     end
  local i = 1
    for k,v in pairs(data[tostring(msg.chat_id_)]['filterlist']) do
