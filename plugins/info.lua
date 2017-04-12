@@ -1,5 +1,5 @@
---Begin info.lua By @SoLiD
-local Solid = 157059515
+--Begin info.lua By @King_DIS_Love
+local Solid = 374734484
 local function setrank(msg, user_id, value,chat_id)
   local hash = nil
 
@@ -237,4 +237,4 @@ patterns_fa = {
 },
 	run = run
 }
---This Is info.lua for BDReborn Source :)
+--This Is info.lua for BDMrlock Source :)
