@@ -6,7 +6,7 @@ local lang = redis:get(hash)
    if not lang then
         return '_You are not bot admin_'
 else
-     return 'شما مدیر ربات نمیباشید'
+     return 'شما `مدیر` ربات نمیباشید'
     end
 end
     local data = load_data(_config.moderation.data)
@@ -14,7 +14,7 @@ end
 if not lang then
    return '_Group is already added_'
 else
-return 'گروه در لیست گروه های مدیریتی ربات هم اکنون موجود است'
+return '``گروه در لیست گروه های مدیریتی ربات هم اکنون موجود است'
   end
 end
         -- create data array in moderation.json
@@ -65,7 +65,7 @@ end
     if not lang then
   return '*Group has been added*'
 else
-  return 'گروه با موفقیت به لیست گروه های مدیریتی ربات افزوده شد'
+  return ' :) گروه با موفقیت به لیست گروه های مدیریتی ربات افزوده شد'
 end
 end
 
@@ -77,7 +77,7 @@ local lang = redis:get(hash)
      if not lang then
         return '_You are not bot admin_'
    else
-        return 'شما مدیر ربات نمیباشید'
+        return 'شما `مدیر` ربات نمیباشید'
     end
    end
     local data = load_data(_config.moderation.data)
@@ -223,7 +223,7 @@ local lang = redis:get(hash)
   if not lang then
     return "_No_ *moderator* _in this group_"
 else
-   return "در حال حاضر هیچ مدیری برای گروه انتخاب نشده است"
+   return "`در حال حاضر `هیچ مدیری برای گروه انتخاب نشده است"
   end
 end
 if not lang then
@@ -890,7 +890,7 @@ save_data(_config.moderation.data, data)
 if not lang then
  return "*Link* _Posting Has Been Locked_"
 else
- return "ارسال لینک در گروه ممنوع شد"
+ return "ارسال `لینک`در گروه ممنوع شد"
 end
 end
 end
@@ -989,7 +989,7 @@ if not is_mod(msg) then
 if not lang then
  return "_You're Not_ *Moderator*"
 else
- return "شما مدیر گروه نمیباشید"
+ return "شما `مدیر گروه` نمیباشید"
 end
 end
 
@@ -998,7 +998,7 @@ if lock_mention == "yes" then
 if not lang then
  return "*Mention* _Posting Is Already Locked_"
 elseif lang then
- return "ارسال فراخوانی افراد هم اکنون ممنوع است"
+ return "ارسال فراخوانی افراد هم اکنون `ممنوع` است"
 end
 else
  data[tostring(target)]["settings"]["lock_mention"] = "yes"
@@ -1006,7 +1006,7 @@ save_data(_config.moderation.data, data)
 if not lang then 
  return "*Mention* _Posting Has Been Locked_"
 else 
- return "ارسال فراخوانی افراد در گروه ممنوع شد"
+ return "ارسال فراخوانی افراد در گروه `ممنوع` شد"
 end
 end
 end
@@ -1092,7 +1092,7 @@ data[tostring(target)]["settings"]["lock_arabic"] = "no" save_data(_config.moder
 if not lang then
 return "*Arabic/Persian* _Posting Has Been Unlocked_" 
 else
-return "ارسال کلمات عربی/فارسی در گروه آزاد شد"
+return "ارسال کلمات `عربی/فارسی` در گروه آزاد شد"
 end
 end
 end
@@ -1150,7 +1150,7 @@ data[tostring(target)]["settings"]["lock_edit"] = "no" save_data(_config.moderat
 if not lang then
 return "*Editing* _Has Been Unlocked_" 
 else
-return "ویرایش پیام در گروه آزاد شد"
+return "ویرایش `پیام` در گروه `آزاد` شد"
 end
 end
 end
@@ -1769,7 +1769,7 @@ save_data(_config.moderation.data, data)
 if not lang then 
  return "*Mute Gif* _Has Been Enabled_"
 else
- return "بیصدا کردن تصاویر متحرک فعال شد"
+ return " :)بیصدا کردن `تصاویر متحرک` فعال شد"
 end
 end
 end
@@ -1781,7 +1781,7 @@ local lang = redis:get(hash)
 if not lang then
 return "_You're Not_ *Moderator*"
 else
-return "شما مدیر گروه نمیباشید"
+return " :)شما `مدیر گروه` نمیباشید"
 end
 end 
 
@@ -1790,7 +1790,7 @@ local mute_gif = data[tostring(target)]["mutes"]["mute_gif"]
 if not lang then
 return "*Mute Gif* _Is Already Disabled_" 
 elseif lang then
-return "بیصدا کردن تصاویر متحرک غیر فعال بود"
+return " :)بیصدا کردن `تصاویر متحرک` غیر فعال بود"
 end
 else 
 data[tostring(target)]["mutes"]["mute_gif"] = "no"
@@ -1798,7 +1798,7 @@ data[tostring(target)]["mutes"]["mute_gif"] = "no"
 if not lang then
 return "*Mute Gif* _Has Been Disabled_" 
 else
-return "بیصدا کردن تصاویر متحرک غیر فعال شد"
+return " :)بیصدا کردن `تصاویر متحرک` غیر فعال شد"
 end
 end
 end
@@ -1877,7 +1877,7 @@ if mute_inline == "yes" then
 if not lang then
  return "*Mute Inline* _Is Already Enabled_"
 elseif lang then
- return "بیصدا کردن کیبورد شیشه ای فعال است"
+ return "بیصدا کردن `کیبورد شیشه ای` فعال است"
 end
 else
  data[tostring(target)]["mutes"]["mute_inline"] = "yes" 
@@ -1885,7 +1885,7 @@ save_data(_config.moderation.data, data)
 if not lang then
  return "*Mute Inline* _Has Been Enabled_"
 else
- return "بیصدا کردن کیبورد شیشه ای فعال شد"
+ return "بیصدا کردن `کیبورد شیشه ای` فعال شد"
 end
 end
 end
@@ -1897,7 +1897,7 @@ local lang = redis:get(hash)
 if not lang then
 return "_You're Not_ *Moderator*"
 else
-return "شما مدیر گروه نمیباشید"
+return "شما `مدیر گروه` نمیباشید"
 end
 end 
 
@@ -1906,7 +1906,7 @@ local mute_inline = data[tostring(target)]["mutes"]["mute_inline"]
 if not lang then
 return "*Mute Inline* _Is Already Disabled_" 
 elseif lang then
-return "بیصدا کردن کیبورد شیشه ای غیر فعال است"
+return "بیصدا کردن `کیبورد شیشه ای` غیر فعال است"
 end
 else 
 data[tostring(target)]["mutes"]["mute_inline"] = "no"
@@ -1914,7 +1914,7 @@ data[tostring(target)]["mutes"]["mute_inline"] = "no"
 if not lang then
 return "*Mute Inline* _Has Been Disabled_" 
 else
-return "بیصدا کردن کیبورد شیشه ای غیر فعال شد"
+return "بیصدا کردن `کیبورد شیشه ای` غیر فعال شد"
 end
 end
 end
@@ -2808,7 +2808,7 @@ tdcli.pinChannelMessage(msg.to.id, msg.reply_id, 1)
 if not lang then
 return "*Message Has Been Pinned*"
 elseif lang then
-return "پیام سجاق شد"
+return "پیام `سجاق` شد"
 end
 elseif not is_owner(msg) then
    return
@@ -2820,7 +2820,7 @@ tdcli.pinChannelMessage(msg.to.id, msg.reply_id, 1)
 if not lang then
 return "*Message Has Been Pinned*"
 elseif lang then
-return "پیام سجاق شد"
+return "`پیام `سجاق شد"
 end
 end
 end
@@ -2832,7 +2832,7 @@ tdcli.unpinChannelMessage(msg.to.id)
 if not lang then
 return "*Pin message has been unpinned*"
 elseif lang then
-return "پیام سنجاق شده پاک شد"
+return "پیام `سنجاق شده` پاک شد"
 end
 elseif not is_owner(msg) then
    return 
@@ -2842,7 +2842,7 @@ tdcli.unpinChannelMessage(msg.to.id)
 if not lang then
 return "*Pin message has been unpinned*"
 elseif lang then
-return "پیام سنجاق شده پاک شد"
+return "پیام `سنجاق شده` پاک شد"
 end
 end
 end
@@ -3102,7 +3102,7 @@ return lock_join(msg, data, target)
 end
 if matches[2] == 'دستورات' then
 			redis:hset('group:'..msg.to.id..':cmd', 'bot', 'moderator')
-			return 'دستورات برای کاربر عادی قفل شد'
+			return '`دستورات برای کاربر عادی `قفل شد'
 			end
 			end
 end
@@ -3294,7 +3294,7 @@ end
 if matches[2]== 'همه' then
 local hash = 'muteall:'..msg.to.id
 redis:set(hash, true)
-return "بیصدا کردن گروه فعال شد"
+return "`بیصدا کردن گروه `فعال شد"
 end
 end
 end
@@ -3423,15 +3423,15 @@ if matches[1]:lower() == 'cmds' or matches[1] == 'دستورات' and is_owner(m
 	else
 		if matches[2] == 'مالک' then 
 		redis:hset('group:'..msg.to.id..':cmd', 'bot', 'owner') 
-		return 'دستورات برای مدیرکل به بالا دیگر جواب می دهد' 
+		return '`دستورات برای `مدیرکل` به بالا دیگر `جواب می دهد' 
 		end
 		if matches[2] == 'مدیر' then 
 		redis:hset('group:'..msg.to.id..':cmd', 'bot', 'moderator')
-		return 'دستورات برای مدیر به بالا دیگر جواب می دهد' 
+		return '`دستورات برای `مدیر` به بالا دیگر `جواب می دهد' 
 		end 
 		if matches[2] == 'کاربر' then 
 		redis:hset('group:'..msg.to.id..':cmd', 'bot', 'member') 
-		return 'دستورات برای کاربر عادی به بالا دیگر جواب می دهد' 
+		return '`دستورات برای کاربر `عادی` به بالا دیگر `جواب می دهد' 
 		end 
 		end
 	end
@@ -3502,7 +3502,7 @@ if (matches[1]:lower() == 'newlink' or matches[1] == 'لینک جدید') and is
 			if not lang then
 			return '_Please send the new group_ *link* _now_'
     else 
-         return 'لطفا لینک گروه خود را ارسال کنید'
+         return '`لطفا `لینک گروه` خود را `ارسال کنید'
        end
 	   end
 		 data[tostring(chat)]['settings']['linkgp'] = matches[2]
@@ -3510,7 +3510,7 @@ if (matches[1]:lower() == 'newlink' or matches[1] == 'لینک جدید') and is
       if not lang then
 			return 'Your group link has been saved'
     else 
-         return 'لینک گروه شما با موفقیت ذخیره شد'
+         return '``لینک گروه شما با موفقیت ذخیره شد'
        end
 		end
 		if msg.text then
@@ -3521,7 +3521,7 @@ if (matches[1]:lower() == 'newlink' or matches[1] == 'لینک جدید') and is
             if not lang then
 				return "*Newlink* _has been set_"
            else
-           return "لینک جدید ذخیره شد"
+           return "``لینک جدید ذخیره شد"
 		 	end
        end
 		end
@@ -3561,7 +3561,7 @@ if (matches[1]:lower() == 'newlink' or matches[1] == 'لینک جدید') and is
       if not lang then
         return "*Group Link Was Send In Your Private Message*"
        else
-        return "_لینک گروه به چت خصوصی شما ارسال شد_"
+        return "_`لینک گروه به`چت خصوصی` شما `ارسال شد_"
         end
      end
 	 end
@@ -3571,7 +3571,7 @@ if (matches[1]:lower() == 'newlink' or matches[1] == 'لینک جدید') and is
      if not lang then
     return "*Group rules* _has been set_"
    else 
-  return "قوانین گروه ثبت شد"
+  return "``قوانین گروه ثبت شد"
    end
   end
   if matches[1]:lower() == "rules" or matches[1] == 'قوانین' then
@@ -3669,7 +3669,7 @@ tdcli_function ({
        end
 			if matches[2] == 'welcome' then
 				if not data[tostring(chat)]['setwelcome'] then
-					return "*Welcome Message not set*"
+					return "*`Welcome Message not set`*"
 				end
 					data[tostring(chat)]['setwelcome'] = nil
 					save_data(_config.moderation.data, data)
@@ -3690,23 +3690,23 @@ tdcli_function ({
 			else
 			if matches[2] == 'مدیران' then
 				if next(data[tostring(chat)]['mods']) == nil then
-                return "هیچ مدیری برای گروه انتخاب نشده است"
+                return "``هیچ مدیری برای گروه انتخاب نشده است"
             end
 				for k,v in pairs(data[tostring(chat)]['mods']) do
 					data[tostring(chat)]['mods'][tostring(k)] = nil
 					save_data(_config.moderation.data, data)
 				end
-            return "تمام مدیران گروه تنزیل مقام شدند"
+            return "تمام مدیران گروه `تنزیل مقام` شدند"
          end
 			if matches[2] == 'لیست فیلتر' then
 				if next(data[tostring(chat)]['filterlist']) == nil then
-					return "_لیست کلمات فیلتر شده خالی است_"
+					return "_لیست کلمات `فیلتر شده` خالی است_"
 				end
 				for k,v in pairs(data[tostring(chat)]['filterlist']) do
 					data[tostring(chat)]['filterlist'][tostring(k)] = nil
 					save_data(_config.moderation.data, data)
 				end
-				return "_لیست کلمات فیلتر شده پاک شد_"
+				return "_لیست کلمات `فیلتر شده` پاک شد_"
 			end
 			if matches[2] == 'قوانین' then
 				if not data[tostring(chat)]['rules'] then
@@ -3825,14 +3825,14 @@ local hash = "gp_lang:"..msg.to.id
 local lang = redis:get(hash)
 if matches[2] == "fa" then
 redis:set(hash, true)
-return "*زبان گروه تنظیم شد به : فارسی*"..BDRpm
+return "*` @MRLOCK_CLI زبان گروه تنظیم شد به : `فارسی*"
 end
 end
 if matches[1] == 'زبان انگلیسی' then
 local hash = "gp_lang:"..msg.to.id
 local lang = redis:get(hash)
  redis:del(hash)
-return "_Group Language Set To:_ EN"..BDRpm
+return "_Group Language Set To:_ `EN`"
 end
  if matches[1] == 'mutetime' or matches[1] == 'زمان بیصدا' and is_mod(msg) then
 local hash = 'muteall:'..msg.to.id
@@ -3894,7 +3894,7 @@ if not lang then
 		if not lang then
 		return '_Mute All is Disable._'
 		else
-		return '_بیصدا بودن گروه غیر فعال است._'
+		return '_بیصدا بودن گروه `غیر فعال` است._'
 		end
 		else
 		if not lang then
@@ -3908,7 +3908,7 @@ if not lang then
 if matches[1]:lower() == "help" or matches[1] == 'راهنما' and is_mod(msg) then
 if not lang then
 text = [[
-*Beyond Bot Commands:*
+* `SPIDER BOT` Commands:*
 *!setmanager* `[username|id|reply]` 
 _Add User To Group Admins(CreatorBot)_
 *!Remmanager* `[username|id|reply]` 
@@ -4018,12 +4018,13 @@ _Show mute Help_
 _You Can Use_ *[!/#]* _To Run The Commands_
 _This Help List Only For_ *Moderators/Owners!*
 _Its Means, Only Group_ *Moderators/Owners* _Can Use It!_
-*Good luck ;)*]]
+*Good luck :)*
+				@MrLock_Cli ]]
 
 elseif lang then
 
 text = [[
-*دستورات ربات بیوند:*
+* راهنمای دستورات Spider Bot*
 *ادمین گروه* `[username|id|reply]` 
 _افزودن ادمین گروه(درصورت اینکه ربات سازنده  گروه)_
 *حذف ادمین گروه* `[username|id|reply]` 
@@ -4133,7 +4134,8 @@ _نمایش دستورات بیصدا های گروه_
 
 _این راهنما فقط برای مدیران/مالکان گروه میباشد!
 این به این معناست که فقط مدیران/مالکان گروه میتوانند از دستورات بالا استفاده کنند!_
-*موفق باشید ;)*]]
+*موفق باشید ;)
+				@MRLOCK_CLI *]]
 end
 return text
 end
@@ -4484,4 +4486,4 @@ run=run,
 pre_process = pre_process
 }
 
--- ## @BeyondTeam
+-- ## @MR_LOCK_CLI
