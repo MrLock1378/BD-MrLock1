@@ -1,4 +1,4 @@
-# [BDReborn](https://telegram.me/BDReborn)
+# [🛡LOCKER TEAM🛡](https://telegram.me/LockerTeam)
 
 **An advanced and powerful administration bot based on NEW TG-CLI
 
